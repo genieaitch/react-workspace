@@ -18,6 +18,9 @@ import PracticeUseEffectAxios from "./Practice/PracticeUseEffectAxios";
 import PizzaList from "./BackendAPI/PizzaList";
 import RootPath from "./RootPath";
 import {BrowserRouter} from "react-router-dom";
+import ReactRouterDom from "./ReactRouterDom";
+import CafeList from "./pages/CafeList";
+import Home from "./pages/Home";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -29,9 +32,10 @@ root.render(
       BrowserRouter 와 Routes 는 모든 파일에서 최초 1회만 작성
       */}
       <RootPath>
+          <RootPath/>
+      {/*
       <RootPath/>
-      {/* return 내에 사용할 수 있는 주석
-
+      return 내에 사용할 수 있는 주석
       App.js 는 필수로 사용해야하는 자바스크립트 파일이 아님
        만일 App.js 가 아니라 다른 파일을 사용하길 원한다면
        파일명.js 를 import 해서 사용할 수 있음
@@ -50,8 +54,8 @@ root.render(
       <PracticePropsArray/>
       <ChapIUseEffect/>
       <PracticeUseEffectAxios/>
-       */}
       <PizzaList/>
+       */}
       </RootPath>
   </React.StrictMode>
 );
