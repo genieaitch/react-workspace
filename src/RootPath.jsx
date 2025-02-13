@@ -9,6 +9,8 @@ import PizzaList from "./BackendAPI/PizzaList";
 import PizzaDetail from "./BackendAPI/PizzaDetail";
 import ChapUseEffect from "./Chapter/ChapIUseEffect";
 import PizzaForm from "./BackendAPI/PizzaForm";
+import Header from "./layout/Header";
+import Footer from "./layout/Footer";
 // React 에서 작성하는 경로는 view Controller와 관계
 // springboot resource 밑에 작성한 css/ js/ html 파일은 더이상 의미가 없음
 // 위 역할을 react 에서 모두 할 것이기 때문
@@ -16,6 +18,7 @@ function RootPath() {
     // 추후 axios 나 로그인 세션 상태관리 작성
     return (
         <Router>
+        <Header/>
             {/*
             경로(url, api)를 설정하여 위치에 따른 html 호출을 요청할 경우
             BrowserRouter as Router 를
@@ -25,8 +28,8 @@ function RootPath() {
                최초 1회 작성하여 Component 들을 모두 감싸줌
              현재는 2번 방식을 사용한 상태이며,
              RootPath 와 같이 사용할 수 있음
-               */}
             <ChapUseEffect/>
+               */}
             <Routes>
                 {/*
                 React 에서 경로로 표기하는 Component 와
@@ -51,6 +54,7 @@ function RootPath() {
                 <Route path="/pizzas/detail/:id" element={<PizzaDetail/>}/>
                 <Route path="/pizza/add" element={<PizzaForm/>}/>
             </Routes>
+            <Footer/>
         </Router>
     )
 }
