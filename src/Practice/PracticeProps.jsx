@@ -1,4 +1,4 @@
-import Parent from "../Chapter/ChapProps";
+import Parent from "../Chapter/ChapProps/ChapProps";
 
 const PracticeProps = () => {
     return(
